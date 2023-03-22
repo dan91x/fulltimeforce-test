@@ -8,7 +8,7 @@ export default function useData() {
     useEffect(() => {
         const loadCommits = () => {
             axios({
-                url: "http://localhost:3020" + "/repository/commits",
+                url: "http://localhost:3020/repository/commits",
             })
                 .then((resp) => {
                     if (resp.status === 200 && resp.data) {
