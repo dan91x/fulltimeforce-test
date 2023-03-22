@@ -14,7 +14,7 @@ export default function MainContent(props){
                     Technical Test Fulltime-Force
                 </Typography>
                 <Typography variant="body2" className="text-secondary">Link to 
-                    <a href="https://github.com/dan91x/fulltimeforce-test/commits/master" className="ms-1" target="_blank">Repository</a>
+                    <a href="https://github.com/dan91x/fulltimeforce-test/commits/master" rel="noreferrer" className="ms-1" target="_blank">Repository</a>
                 </Typography>
                 <CommitsList Loading={Loading} CommitsData={CommitsData}/>
             </div>

@@ -58,7 +58,7 @@ function Commit(props) {
             <div className="">
                 {
                     commitdata && commitdata.sha && commitdata.url?
-                    <a href={commitdata.html_url} target="_blank" className="text-decoration-none">
+                    <a href={commitdata.html_url} target="_blank" rel="noreferrer" className="text-decoration-none">
                         <Button size="small" variant="outlined" style={{textTransform:'lowercase'}}>{commitdata.sha.substring(0,7)}</Button> 
                     </a>:""
                 } 
