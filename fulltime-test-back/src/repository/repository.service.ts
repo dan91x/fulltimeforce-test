@@ -19,10 +19,15 @@ export class RepositoryService {
             if(result.status===200 && result.data){
                 return result.data
             }
-            else
+            else{
+                console.log(result)
                 throw new HttpException("API_ERROR",result.status)
+            }
         }catch(error){
-            throw new HttpException("API_ERROR",500)
+            console.log("Error",error)
+
+            if(error.response.status===403) throw new HttpException("rate limit exceeded with GH",403)
+            else throw new HttpException("API_ERROR",500)
         }
     }
 }
